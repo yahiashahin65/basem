@@ -1,0 +1,146 @@
+:root {
+    --color-petrol: #0B5351 !important;
+    --color-gold: #D4AF37 !important;
+    --color-bg: #f4f7f6;
+    --grad: linear-gradient(135deg, #0B5351 0%, #052c2b 100%);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; list-style: none; }
+body { font-family: 'Cairo', sans-serif; background-color: var(--color-bg) !important; direction: rtl; overflow-x: hidden; min-height: 100vh; }
+
+/* شاشة التحميل (Loader) */
+#loader { 
+    position: fixed; top:0; left:0; width:100%; height:100%; 
+    background: var(--grad); z-index: 99999; 
+    display:flex; align-items:center; justify-content:center; 
+    transition: 0.5s;
+}
+.loader-content { text-align: center; color: #fff; }
+.loader-logo { width: 100px; border-radius: 50%; border: 2px solid var(--color-gold); margin-bottom: 15px; }
+.loader-bar { width: 200px; height: 4px; background: rgba(255,255,255,0.2); border-radius: 10px; margin: 10px auto; overflow: hidden; }
+.loader-bar span { display: block; height: 100%; background: var(--color-gold); width: 0; animation: load 2s forwards; }
+@keyframes load { to { width: 100%; } }
+
+/* السايدبار */
+#sidebar { width: 300px; background: var(--grad); color: #fff; height: 100vh; position: fixed; top: 0; right: 0; padding: 20px; z-index: 4000; transition: 0.3s; }
+.site-logo { width: 100px !important; height: 100px !important; border-radius: 50%; display: block; margin: 0 auto 10px; object-fit: contain; background: #fff; border: 2px solid var(--color-gold); }
+.logo-name { text-align: center; color: var(--color-gold) !important; font-size: 1.2rem; margin-bottom: 20px; }
+
+#main-content { margin-right: 300px; padding: 40px; min-height: 100vh; position: relative; }
+.content-block { display: none !important; margin-bottom: 50px; } 
+.content-block.active-content { display: block !important; animation: fadeIn 0.4s; }
+
+.category-link { display: block; color: #eee !important; text-decoration: none; padding: 12px; border-radius: 10px; margin-bottom: 8px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; cursor: pointer; }
+.category-link.active, .category-link:hover { background: var(--color-gold) !important; color: var(--color-petrol) !important; font-weight: bold; }
+
+/* الفيديوهات */
+.videos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.video-card { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); position: relative; cursor: pointer; transition: 0.3s; }
+.video-card:hover { transform: translateY(-5px); }
+.video-placeholder { position: relative; aspect-ratio: 16/9; background: #000; }
+.video-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+.play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: var(--color-petrol) !important; color: var(--color-gold) !important; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid var(--color-gold); z-index: 2; }
+
+/* العدادات */
+.stats-container { display: flex; justify-content: space-around; gap: 10px; margin-top: 25px; flex-wrap: wrap; }
+.stat-item { background: #fff; padding: 15px; border-radius: 12px; flex: 1; min-width: 120px; text-align: center; border-bottom: 3px solid var(--color-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.stat-number { display: block; font-size: 1.8rem; font-weight: bold; color: var(--color-petrol) !important; }
+
+/* بوب أب الفيديو - (تم تعديل المقاسات لتملأ الشاشة) */
+.video-overlay { 
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+    background: rgba(0,0,0,0.95); z-index: 10000; 
+    display: none; align-items: center; justify-content: center; 
+    backdrop-filter: blur(8px); padding: 10px;
+}
+
+.video-container { 
+    width: 95%; /* يفرش بعرض الشاشة */
+    max-width: 1100px; /* أقصى عرض للكمبيوتر */
+    aspect-ratio: 16/9; 
+    position: relative; 
+    background: #000; 
+    border-radius: 15px; 
+    border: 1px solid var(--color-gold);
+    overflow: hidden;
+}
+
+/* إجبار الفيديو يملأ الـ container بالكامل */
+.video-container iframe, 
+#player-container iframe,
+#yt-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+}
+
+.close-video { position: absolute; top: -45px; left: 0; color: #fff; font-size: 35px; cursor: pointer; z-index: 10001; }
+
+/* إصلاح الفوتر */
+.site-footer { 
+    padding: 30px 0; 
+    text-align: center; 
+    border-top: 1px solid #ddd; 
+    width: 100%;
+    margin-top: 40px;
+}
+.footer-icons { margin-bottom: 10px; }
+.footer-icons a { color: var(--color-petrol) !important; font-size: 22px; margin: 0 10px; transition: 0.3s; }
+.footer-icons a:hover { color: var(--color-gold) !important; }
+
+/* زر واتساب عائم */
+.whatsapp-float { position: fixed; bottom: 20px; left: 20px; background: #25d366 !important; color: #fff !important; padding: 12px 20px; border-radius: 50px; text-decoration: none; z-index: 5000; display: flex; align-items: center; gap: 10px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+
+/* تنسيق قسم الخدمات */
+.info-card { 
+    background: #fff; 
+    padding: 25px; 
+    border-radius: 15px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+}
+
+.services-list { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 15px; 
+    margin-top: 20px; 
+}
+
+.service-item { 
+    background: var(--grad); 
+    color: var(--color-gold) !important; 
+    padding: 15px; 
+    border-radius: 10px; 
+    font-weight: bold; 
+    text-align: center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.service-item:hover {
+    transform: scale(1.03);
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+    #sidebar { transform: translateX(100%); }
+    #sidebar.is-open { transform: translateX(0); }
+    #main-content { margin-right: 0; padding: 80px 15px 30px; }
+    
+    .video-container { 
+        width: 100%; /* مالي عرض شاشة التليفون */
+        border-radius: 0; /* شكل احترافي في الموبايل */
+        border-left: none;
+        border-right: none;
+    }
+    
+    .sidebar-toggle { position: fixed; top: 15px; right: 15px; z-index: 5000; background: var(--color-petrol) !important; color: var(--color-gold) !important; padding: 10px 20px; border-radius: 25px; border: 2px solid var(--color-gold); display: block; transition: 0.4s; }
+    .sidebar-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 3500; display: none; }
+    .sidebar-overlay.is-open { display: block; }
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
