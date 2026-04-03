@@ -1,7 +1,7 @@
 :root {
     /* Light Mode (Beige Theme) */
     --bg: #fefae0;
-    --text: #283618;
+    --text: #283618; /* اللون الغامق اللي انت عايزه للأيقونات */
     --accent: #d4a373;
     --card-bg: #faedcd;
     --nav-bg: rgba(254, 250, 224, 0.8);
@@ -40,39 +40,33 @@ h1 { font-size: 3rem; margin-bottom: 15px; }
 .primary { background: var(--accent); color: white; }
 .secondary { border: 2px solid var(--accent); color: var(--accent); }
 
-/* Portfolio & Sections */
-.section-title { margin: 60px 0 30px; font-size: 2rem; border-right: 5px solid var(--accent); padding-right: 15px; }
-
-/* Skills Section Update (الدلع الجديد) */
+/* Skills Section - تم تعديل لون الأيقونة ليكون نفس لون النص */
 .skills-grid-modern {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
     margin-top: 20px;
 }
 .skill-item-new {
     background: var(--card-bg);
-    padding: 25px;
+    padding: 30px 15px;
     border-radius: 15px;
     text-align: center;
     border: 1px solid rgba(0,0,0,0.05);
-    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
 .skill-item-new i {
     display: block;
-    font-size: 35px;
-    color: var(--accent);
-    margin-bottom: 10px;
+    font-size: 40px;
+    color: var(--text); /* هنا خلينا اللون غامق موحد */
+    margin-bottom: 15px;
 }
 .skill-item-new span {
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-.skill-item-new:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    font-weight: 700;
 }
 
+/* Portfolio */
+.section-title { margin: 60px 0 30px; font-size: 2rem; border-right: 5px solid var(--accent); padding-right: 15px; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
 .card { background: var(--card-bg); border-radius: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
 .card img { width: 100%; height: 250px; object-fit: cover; }
