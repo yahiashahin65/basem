@@ -3,53 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>باسم | مصمم 2D & 3D الشامل</title>
+    <title>باسم الطنطاوي | معرض أعمالي</title>
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
-        <div class="logo">BASSEM<span>.</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">الرئيسية</a></li>
-            <li><a href="#about">عني</a></li>
-            <li><a href="#portfolio">أعمالي</a></li>
-            <li><a href="#contact">تواصل معي</a></li>
-        </ul>
+        <div class="container nav-flex">
+            <div class="logo">BASSEM<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">عني</a></li>
+                <li><a href="#portfolio">أعمالي</a></li>
+                <li><a href="#contact">تواصل</a></li>
+            </ul>
+        </div>
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-content" data-aos="fade-up">
-            <img src="https://via.placeholder.com/150" alt="باسم" class="profile-img shadow-vibrant">
-            <h1>أهلاً، أنا <span class="highlight">باسم</span></h1>
-            <p class="lead">أجمع بين إبداع تصاميم 2D وواقعية عوالم 3D لصنع تجارب بصرية لا تُنسى.</p>
+        <div class="hero-content" data-aos="zoom-in">
+            <!-- هنا هتحط صورتك باسم me.jpg مثلاً -->
+            <div class="img-holder">
+                <img src="https://i.ibb.co/L8N76Yv/profile-placeholder.png" alt="باسم" class="profile-img">
+            </div>
+            <h1>باسم <span class="highlight">الطنطاوي</span></h1>
+            <p>مصمم 2D & 3D | خبير Blender و Adobe</p>
             <div class="hero-btns">
-                <a href="#portfolio" class="btn primary shadow-vibrant">استكشف أعمالي</a>
-                <a href="#contact" class="btn secondary">تحدث معي</a>
+                <a href="#portfolio" class="btn primary">معرض الأعمال</a>
+                <a href="#contact" class="btn secondary">تواصل معي</a>
             </div>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-down">من أنا؟</h2>
-            <div class="about-grid">
-                <div class="about-text" data-aos="fade-left">
-                    <p>أنا باسم، مصمم شغوف ومبتكر بخبرة واسعة في مجالي التصميم ثنائي الأبعاد (2D) وثلاثي الأبعاد (3D). أسعى دائماً لدمج الفن بالتكنولوجيا لخلق حلول بصرية متميزة تلبي وتتجاوز توقعات العملاء. أحب التحديات وتعلم كل ما هو جديد في عالم التصميم.</p>
+            <h2 class="section-title">من أنا؟</h2>
+            <div class="about-flex">
+                <div class="about-text">
+                    <p>أنا باسم، فنان بصري متخصص في دمج الفن الرقمي 2D مع القوة التقنية للـ 3D. بشتغل على برامج أدوبي (Photoshop, Illustrator) وبصمم عوالم واقعية باستخدام Blender.</p>
                 </div>
-                <div class="skills-list" data-aos="fade-right">
-                    <h3>أدواتي الإبداعية:</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">Adobe Photoshop</div>
-                        <div class="skill-item">Adobe Illustrator</div>
-                        <div class="skill-item">Adobe After Effects</div>
-                        <div class="skill-item">Blender</div>
-                        <div class="skill-item">Adobe Premiere Pro</div>
-                        <div class="skill-item">Figma</div>
-                    </div>
+                <div class="skills">
+                    <span class="skill">Blender</span>
+                    <span class="skill">Photoshop</span>
+                    <span class="skill">Illustrator</span>
+                    <span class="skill">After Effects</span>
+                    <span class="skill">Premiere</span>
                 </div>
             </div>
         </div>
@@ -57,62 +61,34 @@
 
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-down">معرض الأعمال</h2>
-            <div class="filter-btns" data-aos="fade-up">
-                <button class="filter-btn active" data-filter="all">الكل</button>
-                <button class="filter-btn" data-filter="2d">تصميم 2D</button>
-                <button class="filter-btn" data-filter="3d">تصميم 3D</button>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-card 3d" data-aos="zoom-in">
-                    <img src="https://via.placeholder.com/600x450/6c5ce7/fff?text=3D+Project+1" alt="3D Work">
-                    <div class="overlay">
-                        <h3>اسم المشروع 3D</h3>
-                        <p>Blender / Cycles</p>
-                    </div>
+            <h2 class="section-title">أبرز الأعمال</h2>
+            <div class="grid">
+                <!-- كارت مشروع 1 -->
+                <div class="card" data-aos="fade-up">
+                    <img src="https://via.placeholder.com/400x300/6c5ce7/ffffff?text=3D+Project" alt="3D">
+                    <div class="info"><h3>تصميم 3D</h3><p>Blender</p></div>
                 </div>
-                <div class="project-card 2d" data-aos="zoom-in">
-                    <img src="https://via.placeholder.com/600x450/00cec9/fff?text=2D+Project+1" alt="2D Work">
-                    <div class="overlay">
-                        <h3>هوية بصرية</h3>
-                        <p>Illustrator / Photoshop</p>
-                    </div>
-                </div>
-                <div class="project-card 3d" data-aos="zoom-in">
-                    <img src="https://via.placeholder.com/600x450/81ecec/fff?text=3D+Project+2" alt="3D Work">
-                    <div class="overlay">
-                        <h3>نمذجة منتج</h3>
-                        <p>Blender</p>
-                    </div>
-                </div>
-                 <div class="project-card 2d" data-aos="zoom-in">
-                    <img src="https://via.placeholder.com/600x450/a29bfe/fff?text=2D+Project+2" alt="2D Work">
-                    <div class="overlay">
-                        <h3>تصميم سوشيال ميديا</h3>
-                        <p>Photoshop</p>
-                    </div>
+                <!-- كارت مشروع 2 -->
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://via.placeholder.com/400x300/00cec9/ffffff?text=2D+Project" alt="2D">
+                    <div class="info"><h3>هوية بصرية</h3><p>Adobe Suite</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact">
-        <div class="container footer-content">
-            <h3>لنخلق شيئاً مذهلاً معاً</h3>
-            <p>جاهز لمشروعك القادم؟ تواصل معي عبر المنصات التالية:</p>
-            <div class="social-links">
-                <a href="#" target="_blank"><i class="fab fa-behance"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-artstation"></i></a>
-                 <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
-            </div>
-            <p class="copyright">© 2024 باسم | جميع الحقوق محفوظة</p>
+    <footer>
+        <div class="socials">
+            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
         </div>
+        <p>جميع الحقوق محفوظة © باسم 2026
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
