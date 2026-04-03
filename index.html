@@ -3,92 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>باسم الطنطاوي | معرض أعمالي</title>
+    <title>باسم التونسي | 2D & 3D Artist</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="light-mode"> <!-- الوضع الافتراضي فاتح بيج -->
 
     <nav>
         <div class="container nav-flex">
             <div class="logo">BASSEM<span>.</span></div>
             <ul class="nav-links">
                 <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#about">عني</a></li>
                 <li><a href="#portfolio">أعمالي</a></li>
-                <li><a href="#contact">تواصل</a></li>
+                <li><button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button></li>
             </ul>
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content" data-aos="zoom-in">
-            <!-- هنا هتحط صورتك باسم me.jpg مثلاً -->
-            <div class="img-holder">
-                <img src="https://i.ibb.co/L8N76Yv/profile-placeholder.png" alt="باسم" class="profile-img">
+    <div class="container">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="profile-circle">
+                <img src="https://ui-avatars.com/api/?name=Bassem&background=d4a373&color=fff&size=200" alt="Bassem">
             </div>
-            <h1>باسم <span class="highlight">الطنطاوي</span></h1>
-            <p>مصمم 2D & 3D | خبير Blender و Adobe</p>
+            <h1>أهلاً، أنا <span class="accent-text">باسم الطنطاوي</span></h1>
+            <p>مصمم بصري متخصص في ابتكار عوالم 2D و 3D بجودة احترافية.</p>
             <div class="hero-btns">
-                <a href="#portfolio" class="btn primary">معرض الأعمال</a>
+                <a href="#portfolio" class="btn primary">تصفح المشاريع</a>
                 <a href="#contact" class="btn secondary">تواصل معي</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">من أنا؟</h2>
-            <div class="about-flex">
-                <div class="about-text">
-                    <p>أنا باسم، فنان بصري متخصص في دمج الفن الرقمي 2D مع القوة التقنية للـ 3D. بشتغل على برامج أدوبي (Photoshop, Illustrator) وبصمم عوالم واقعية باستخدام Blender.</p>
-                </div>
-                <div class="skills">
-                    <span class="skill">Blender</span>
-                    <span class="skill">Photoshop</span>
-                    <span class="skill">Illustrator</span>
-                    <span class="skill">After Effects</span>
-                    <span class="skill">Premiere</span>
-                </div>
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <h2 class="section-title">عن مهاراتي</h2>
+            <div class="skills-container">
+                <div class="skill-tag">Blender</div>
+                <div class="skill-tag">Photoshop</div>
+                <div class="skill-tag">Illustrator</div>
+                <div class="skill-tag">After Effects</div>
+                <div class="skill-tag">3D Modeling</div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2 class="section-title">أبرز الأعمال</h2>
+        <!-- Portfolio -->
+        <section id="portfolio" class="portfolio">
+            <h2 class="section-title">معرض الأعمال</h2>
             <div class="grid">
-                <!-- كارت مشروع 1 -->
-                <div class="card" data-aos="fade-up">
-                    <img src="https://via.placeholder.com/400x300/6c5ce7/ffffff?text=3D+Project" alt="3D">
-                    <div class="info"><h3>تصميم 3D</h3><p>Blender</p></div>
+                <div class="card">
+                    <img src="https://placehold.co/600x400/e9edc9/606c38?text=3D+Render" alt="Work">
+                    <div class="card-content"><h3>مشروع ثري دي</h3><p>Blender / Cycles</p></div>
                 </div>
-                <!-- كارت مشروع 2 -->
-                <div class="card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://via.placeholder.com/400x300/00cec9/ffffff?text=2D+Project" alt="2D">
-                    <div class="info"><h3>هوية بصرية</h3><p>Adobe Suite</p></div>
+                <div class="card">
+                    <img src="https://placehold.co/600x400/faedcd/d4a373?text=2D+Design" alt="Work">
+                    <div class="card-content"><h3>تصميم براندينج</h3><p>Illustrator</p></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
-    <footer>
+    <footer id="contact">
         <div class="socials">
             <a href="#"><i class="fab fa-behance"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p>جميع الحقوق محفوظة © باسم 2026
+        <p>© 2026 باسم التونسي - جميع الحقوق محفوظة</p>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
